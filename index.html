@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        
+        <!-- Budget Section -->
+        <section>
+            <label for="budget-input">Set Monthly Budget: </label>
+            <input type="number" id="budget-input" placeholder="Enter budget" min="0">
+            <button id="set-budget-btn">Set Budget</button>
+            <p id="budget-status"></p>
+
+            <!-- Progress Bar for Budget Usage -->
+            <progress id="budget-progress" value="0" max="100"></progress>
+        </section>
+
+        <!-- Expense Form Section -->
+        <section>
+            <h2>Add Expense</h2>
+            <form id="expense-form">
+                <label for="category">Category:</label>
+                <input type="text" id="category" placeholder="e.g., Food, Rent" required>
+
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" placeholder="Enter amount" min="0" required>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+
+                <button type="submit">Add Expense</button>
+            </form>
+        </section>
+
+        <!-- Expenses List Section -->
+        <section>
+            <h2>View Expenses</h2>
+            <select id="sort-expenses">
+                <option value="date">Sort by Date</option>
+                <option value="amount">Sort by Amount</option>
+                <option value="category">Sort by Category</option>
+            </select>
+            <ul id="expenses-list"></ul>
+            <p id="total-expense">Total Expense: $0</p>
+        </section>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

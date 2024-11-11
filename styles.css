@@ -1,0 +1,44 @@
+/* General styling for the progress bar */
+progress {
+    width: 100%;
+    height: 25px; /* Slightly taller for better visibility */
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f4f4f4; /* Light gray background for the progress bar track */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for depth */
+}
+
+/* Webkit browsers (Chrome, Safari) */
+progress::-webkit-progress-bar {
+    background-color: #f4f4f4; /* Light gray background for the track */
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(135deg, #4caf50, #81c784); /* Gradient from green to light green */
+    border-radius: 10px;
+}
+
+/* Mozilla Firefox */
+progress::-moz-progress-bar {
+    background: linear-gradient(135deg, #4caf50, #81c784); /* Gradient from green to light green */
+    border-radius: 10px;
+}
+
+/* Additional styling for when the progress bar is nearing full */
+progress[value="80"]::-webkit-progress-value {
+    background: linear-gradient(135deg, #ff9800, #ffb74d); /* Orange gradient for 80% utilization */
+}
+
+progress[value="80"]::-moz-progress-bar {
+    background: linear-gradient(135deg, #ff9800, #ffb74d); /* Orange gradient for 80% utilization */
+}
+
+progress[value="100"]::-webkit-progress-value {
+    background: linear-gradient(135deg, #f44336, #e57373); /* Red gradient for 100% utilization */
+}
+
+progress[value="100"]::-moz-progress-bar {
+    background: linear-gradient(135deg, #f44336, #e57373); /* Red gradient for 100% utilization */
+}
